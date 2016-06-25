@@ -131,7 +131,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	ws = new WebSocket(location.protocol.replace("http","ws") + "//" + window.location.hostname + ":9000");
 	ws.binaryType = 'arraybuffer';
 	ws.onopen = function() {
-		waitTime = 1000;
 		setInterval(manageMove, 250);
 	};
 
@@ -174,25 +173,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	ws.onclose = function() {
 		console.log("GoodBye");
-		window.setTimeout(wsConnect, waitTime);
-		waitTime = Math.min(waitTime * 2, 120000);
+		window.setTimeout(wsConnect, 2000);
 	}
 	};
 var colours =  ["ali","white","black", "orange","red", "blue", "purple", "green"]; 
 for (var c = 0; c < colours.length; c++) {
-for (var i = 0; i < 55; i++) {
-var newBall = document.createElement('div');
-newBall.className = "ball ";
-newBall.className += colours[c];
-newBall.className += " " + colours[c] + i;
-newBall.style.position = "absolute";
-newBall.style.left = 100 + i + "px";
-newBall.style.top = 35 + "px";
-newBall.style.zIndex = c + i * 10 + "";
-newBall.onclick = getActiveBall;
-newBall.style.display = 'none';
-draw.appendChild(newBall);
-}
+	for (var i = 0; i < 55; i++) {
+		var newBall = document.createElement('div');
+		newBall.className = "ball ";
+		newBall.className += colours[c];
+		newBall.className += " " + colours[c] + i;
+		newBall.style.position = "absolute";
+		newBall.style.left = 100 + i + "px";
+		newBall.style.top = 35 + "px";
+		newBall.style.zIndex = c + i * 10 + "";
+		newBall.onclick = getActiveBall;
+		newBall.style.display = 'none';
+		draw.appendChild(newBall);
+	}
 }
 wsConnect();
 chatEntry.focus ()
