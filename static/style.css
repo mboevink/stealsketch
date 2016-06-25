@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+}
+#header {
+  width: 100%;
+  height: 75px;
+  background-color: #000;
+}
+#container{
+  height: 100%;
+  width: 1200px;
+}
+#drawContainer {
+  min-width: 800px;
+  min-height: 700px;
+  float: left;
+}
+#draw {
+  width: 822px;
+  height: 700px;
+  float: left;
+  border-style: solid;
+  border-color: #ccc;
+  border-width:1px;
+} 
+#chat {
+  min-width: 300px;
+  max-width: 300px;
+  height: 639px;
+  border-left-style:solid;
+  border-right-style:solid;
+  border-left-color: #ccc;
+  border-right-color: #ccc;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  float: left;
+  overflow-y: hidden !important;
+  padding: 0px;
+}
+#chatList {
+  height: 520px;
+  margin-top:118px;
+  overflow-y: scroll !important;
+}
+#userList {
+  width : 300px;
+  height: 120px;
+  position: fixed;
+  border-bottom-style: solid;
+  border-bottom-color: #ccc;
+  border-bottom-width: 1px;
+  overflow-y: scroll !important;
+  text-align: left;
+  background-color: #fff;
+}
+.userBoxes {
+  width: 100%;
+  text-align: left;
+  background-color: #f1f1f1;
+  font-family: Verdana, 'DejaVu Sans', 'Bitstream Vera Sans', Geneva, sans-serif;
+  word-wrap: break-word;
+  min-height: 40px;
+  line-height: 40px;
+  margin-bottom: 3px;
+}
+.userBoxes span {
+  margin-left: 15px;
+  color: #000;
+  word-wrap: break-word;
+  height: 40px;
+  line-height: 40px;
+}
+.userBoxes:nth-child(even) {
+  background-color: #fff;
+}
+#chatin {
+  position: absolute;
+  top: 715px;
+  width: 300px;
+  height: 55px;
+  background-color: #2980b9;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc;
+}
+#chatbox {
+  width:296px;
+  height:54px;
+  float: left;
+  border-top-style:solid;
+  border-top-color: #ccc;
+  border-left-style:none;
+  border-right-style:none;
+  position: relative;
+  overflow: scroll !important;
+}
+#chatSub {
+  width: 92px;
+  height: 57px;
+  border: none;
+}
+.ball {
+border-style: solid;
+border-radius: 30px;
+width: 25px;
+height: 25px;
+}
+.ball.green {
+background-color: #0F0;
+border-color: #0F0;
+}
+.ball.red {
+background-color: #F00;
+border-color: #F00;
+}
+.ball.blue {
+background-color: #00F;
+border-color: #00F;
+}
+.ball.purple {
+background-color: #800080;
+border-color: #800080;
+}
+.ball.orange {
+background-color: #f39c12;
+border-color: #f39c12;
+}
+.ball.black {
+background-color: #000;
+border-color: #000;
+}
+.ball.ali {
+background-color: #FFFF00;
+border-color: #FFFF00;
+}
